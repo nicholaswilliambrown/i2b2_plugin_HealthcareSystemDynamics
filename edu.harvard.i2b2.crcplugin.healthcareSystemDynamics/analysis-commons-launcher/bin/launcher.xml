@@ -13,7 +13,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 -->
-<project name="Demo Launcher" default="calculate_patient_breakdown_by_itemkey" basedir=".">
+<project name="Demo Launcher" default="healthcare_system_dynamics" basedir=".">
 
     <property name="base.dir" value="${basedir}/.."/>
 
@@ -37,9 +37,9 @@
     </path>
 
    
-    <target name="calculate_patient_breakdown_by_itemkey">
+    <target name="healthcare_system_dynamics">
         <mkdir dir="${log.dir}" />
-        <launch classname="edu.harvard.i2b2.plugin.pb.main.PatientCountMain">
+        <launch classname="edu.harvard.i2b2.plugin.pb.main.HealthcareSystemDynamics">
             <classpath refid="base.class.path"/>
             <syspropertyset>
                 <sysproperty key="log.dir" file="${log.dir}"/>

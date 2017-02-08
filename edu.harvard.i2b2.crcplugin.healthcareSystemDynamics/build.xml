@@ -2,9 +2,9 @@
 <!--
 $Id: build.xml,v 1.7 2010/03/09 16:38:29 rk903 Exp $
 -->
-<project name="PatientCount" basedir="." default="dist">
+<project name="HealthcareSystemDynamics" basedir="." default="dist">
 
-	<property name="Name" value="PatientCount" />
+	<property name="Name" value="HealthcareSystemDynamics" />
 	<import file="../edu.harvard.i2b2.server-common/common_build.xml" />
 	<property environment="env" />
 	
@@ -95,7 +95,7 @@ $Id: build.xml,v 1.7 2010/03/09 16:38:29 rk903 Exp $
 	<target name="dist" depends="init,jaxb_gen,compile" description="package application for distribution/deployment">
 		<!-- Package EJB for jboss -->
 		<echo message="${Name}: Creating the ejb archive package!" />
-		  <jar destfile="${dist}/CRCPlugin_PatientCount_Analysis.jar">
+		  <jar destfile="${dist}/CRCPlugin_HealthcareSystemDynamics_Analysis.jar">
 		   <fileset dir="${classes}">
 		    <include name="edu/harvard/i2b2/**" />
 		   </fileset>
@@ -150,6 +150,7 @@ $Id: build.xml,v 1.7 2010/03/09 16:38:29 rk903 Exp $
 	  <chmod perm="+x">
 	   <fileset dir="${target_analysis_folder}/bin">
 	    <include name="*.sh"/>
+		<include name="*.bat"/>
 	   </fileset>
 	  </chmod>
 
@@ -159,8 +160,8 @@ $Id: build.xml,v 1.7 2010/03/09 16:38:29 rk903 Exp $
 	  <copy todir="${target_analysis_folder}/lib" flatten="true">
 	   <!-- from the commons launcher -->
 	   <fileset dir="${dist}">
-	    <include name="CRCPlugin_PatientCount_Analysis.jar"/>
-	    <include name="PatientCount-Server.jar"/>
+	    <include name="CRCPlugin_HealthcareSystemDynamics_Analysis.jar"/>
+	    <include name="HealthcareSystemDynamics-Server.jar"/>
 	   </fileset>
 	   <fileset dir="../${i2b2CommonProject}/dist">
 	    <include name="*.jar"/>

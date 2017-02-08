@@ -1,0 +1,10 @@
+/edu.harvard.i2b2.server-common/dist
+/edu.harvard.i2b2.server-common/genlib
+/edu.harvard.i2b2.server-common/gensrc
+/edu.harvard.i2b2.server-common/classes
+/edu.harvard.i2b2.crcplugin.healthcareSystemDynamics/dist
+/edu.harvard.i2b2.crcplugin.healthcareSystemDynamics/genlib
+/edu.harvard.i2b2.crcplugin.healthcareSystemDynamics/gensrc
+/edu.harvard.i2b2.crcplugin.healthcareSystemDynamics/classes
+/edu.harvard.i2b2.crcplugin.healthcareSystemDynamics/build.bat
+/patient count plugin
